@@ -1,0 +1,90 @@
+
+#main {
+    position:fixed;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    
+}
+
+#app{
+    width:100%;
+    height:100%;
+}
+
+.center {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.tick line {
+    stroke:#C0C0BB;
+}
+
+.tick text {
+    fill:#635F5D;
+}
+
+.mark path {
+    fill:none;
+    stroke:#4169e1;
+    
+}
+
+.mark circle {
+    fill:black;
+}
+
+.mark rect {
+     fill:#4169e1;
+}
+
+.axis-label{
+    font-size:0.80em;
+    fill:#635F5D;
+  
+}
+
+.boxx text {
+    font-size:0.6em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.summary {
+    margin-left: 50px;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1px;
+}
+
+.dropdown label {
+    font-size:10px;
+    
+}
+
+.dropdown select{
+    font-size:10px;
+}
+
+.tick text{
+    fill:#635F5D;
+    cursor:default;
+    
+}
+
+.grid {
+  display: flex;
+}
+
+ .scrollable{
+    height:100vh;
+    width:100vw;
+    overflow:auto;
+}

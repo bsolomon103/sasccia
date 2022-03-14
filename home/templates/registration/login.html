@@ -1,0 +1,40 @@
+{% extends "base_bootstrap.html" %}
+
+{% block content %}
+
+<style>
+
+    h1 {
+        background-color:#3399ff;
+        padding:15px;
+        text-align:center;
+        font-size:55px;
+        color:white;
+        font-weight:bold; 
+    }
+    
+    h2{
+        
+        padding:10px;
+        text-align:center;
+        color:black;
+    }
+    
+   
+</style>
+<h1>S.A.S.C.C.I.A</h1>
+<h2>
+  <strong><em>Southend Adult Social Care Client Intelligence App</em></strong> 
+</h2>
+
+{% if form.errors %}
+  <p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+
+<form method="post" action="{% url 'login' %}">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" onclick="window.location='{% url 'frontend:all' %}' ; return true;" value="Login" />
+<input type="hidden" name="next" value="{{ next }}" />
+</form>
+{% endblock %}
